@@ -10,8 +10,10 @@ body {
 }
 
 .container {
+    padding-left: 43px;
+    padding-right: 43px;
     font-family: "Roboto", sans-serif;
-    max-width: 1426px;
+    max-width: 1512px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -108,24 +110,32 @@ body {
 }
 
 .cards {
-    width: 1424px;
+    max-width: 1426px;
     height: 919px;
     display: flex;
+    flex-wrap: wrap;
     gap: 41px;
 
     .card {
-        min-width: 448px;
+        min-width: 385px;
         max-height: 919px;
-        border: 3px solid green;
         border-radius: 20px;
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.199);
+        box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.089);
         display: flex;
         flex-direction: column;
-        gap: 50px;
-        background-color: yellow;
+        gap: 10px;
+        background-color: white;
+        flex-basis: calc(100% / 3 - (41 * 2) / 3);
+        flex-shrink: 0;
+        flex-grow: 1;
+
+        .grey_color {
+            color: rgba(0, 0, 0, 0.226);
+        }
 
         .info_plan {
             padding: 30px;
+            margin: 20px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -133,13 +143,42 @@ body {
         }
 
         .price {
+            margin-bottom: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 20px;
+            font-size: 25px;
+
+            .numbers {
+                font-size: 80px;
+                font-weight: 800;
+            }
+
+            .background_sale {
+                padding: 5px;
+                background-color: grey;
+                border-radius: 10px;
+            }
+
+            button {
+                width: 80%;
+                padding: 25px 100px;
+                border-radius: 10px;
+                border: none;
+                background-color: #6500ff;
+                color: white;
+            }
         }
 
         .detail_plan {
+            padding: 0;
             list-style: none;
+
+            li {
+                text-align: center;
+                padding: 25px;
+            }
         }
     }
     
