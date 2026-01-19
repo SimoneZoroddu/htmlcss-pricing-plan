@@ -4,8 +4,102 @@
     box-sizing: border-box;
 }
 
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
 .container {
     font-family: "Roboto", sans-serif;
-    max-width: 1201px;
+    max-width: 1426px;
     margin: 0 auto;
+}
+
+.main_container {
+    max-height: 241px;
+    padding-top: 47px;
+    padding-bottom: 111px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .left_box {
+        font-size: 20px;
+
+        p {
+            color: rgba(0, 0, 0, 0.452);
+        }
+
+
+    }
+    .right_box {
+        display: flex;
+        color: rgba(0, 0, 0, 0.452);
+
+        div {
+            display: flex;
+            gap: 4px;
+        }
+
+        .monthly  {
+        color: rgba(0, 0, 0, 0.459);
+        right: 200px;
+        top: 47px;
+
+        .background_monthly {
+            height: 10px;
+            width: 30px;
+            padding-top: 15px;
+            margin-top: 2px;
+            border: hidden;
+            border: 2px solid black;
+            border-radius: 20px;
+            background-color: black;
+            position: relative;
+
+        }
+        
+        .btn_monthly {
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 20px;
+            height: 10px;
+            width: 10px;
+            padding-top: 12px;
+            margin-top: 2px;
+            position: absolute;
+            right: -2px;
+            bottom: -1px;
+        }
+        }
+
+        .yearly {
+        color: rgba(0, 0, 0, 0.459);
+        right: 123px;
+        top: 47px;
+
+        .background_yearly {
+        height: 10px;
+        width: 30px;
+        padding-top: 15px;
+        margin-top: 2px;
+        border: hidden;
+        border: 2px solid gray;
+        border-radius: 20px;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        display: inline-block;
+        }
+
+        .btn_yearly {
+            border: 2px solid gray;
+            border-radius: 20px;
+            height: 10px;
+            width: 10px;
+            padding-top: 12px;
+            margin-top: 2px;
+            position: absolute;
+            left: -2px;
+            bottom: -1px;
+        }
+    }
+    }
 }
